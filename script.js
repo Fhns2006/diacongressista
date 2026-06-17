@@ -63,13 +63,14 @@ document.getElementById("btnConsultar").addEventListener("click", async () => {
     const divResultado = document.getElementById("resultado-consulta");
     const txtCapitao = document.getElementById("infoCapitao");
     const txtDupla = document.getElementById("infoDupla");
+    const txtIdioma = document.getElementById("infoIdioma");
     const txtCarro = document.getElementById("infoCarro");
 
     try {
         // Busca capitão, dupla e carro filtrando pelo nome selecionado
         const { data, error } = await supabaseClient
             .from("usuarios")
-            .select("capitao, dupla, carro")
+            .select("capitao, dupla, carro, idioma")
             .eq("nome", nomeSelecionado)
             .single(); // Traz apenas uma linha (objeto único)
 
@@ -80,6 +81,7 @@ document.getElementById("btnConsultar").addEventListener("click", async () => {
             // Coloca as respostas vindas do banco de dados no HTML
             txtCapitao.innerText = data.capitao || "Não informado";
             txtDupla.innerText = data.dupla || "Não informado";
+            txtIdioma.innerText = data.idioma || "Não informado";
             txtCarro.innerText = data.carro || "Não informado";
 
             // Exibe a caixinha com as informações na tela
