@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e4bf87;
+    background-color: #fde2ba;
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
@@ -10,7 +10,7 @@ body {
     display: flex;  
     justify-content: center;
     align-items: center;
-    background-color: #ddb24c;
+    background-color: #f3cd74;
     font-size: 30px;
     color: rgb(30, 138, 181);
     font-family: 'Cinzel Decorative', serif;
@@ -43,7 +43,14 @@ h3, p {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;    
+    cursor: pointer;  
+    box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);
+    -webkit-box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);
+    -moz-box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);
+}
+
+a{
+    text-decoration: none;
 }
 
 .logo {
@@ -64,18 +71,22 @@ h3, p {
     max-width: 450px; 
     margin-left: auto; 
     margin-right: auto;
+    box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);
+    -webkit-box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);
+    -moz-box-shadow: 26px 21px 51px -11px rgba(32,26,26,0.86);    
 }
 
 
-
+ 
 @media screen and (max-width: 768px) {
     .logo {
         width: 200px;
     }
     
     #header {
-        font-size: 20px;
+        font-size: 15px;
         height: 60px;
+        width: 100%;
     }
 
     #resultado-consulta {
@@ -89,6 +100,12 @@ h3, p {
     max-width: 300px; 
     margin-left: auto; 
     margin-right: auto;
+    }
+
+    h3, p {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
     }
 
 }
