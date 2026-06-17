@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kelly+Slab&family=Rye&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Designação</title>
+</head>
+<body>
+
+    <header id="header">
+        <h2>Dia do Congressista</h2>
+    </header>
+
+    <div id="container-principal">
+        <h3>Consulte Sua Designação e Suas Informações</h3>
+        <p>Selecione Seu Nome Na Lista Para Consultar Sua Designação</p>
+
+        <select id="listaNomes">
+            <option value="">Selecionar Nome</option>
+        </select>
+
+        <button id="btnConsultar">Consultar Designação</button>
+
+        <div id="resultado-consulta">
+            <h3 style="color: #3197b5;">Sua Designação:</h3>
+            <p><strong>Seu Capitão É:</strong> <span id="infoCapitao">-</span></p>
+            <p><strong>Sua Dupla É:</strong> <span id="infoDupla">-</span></p>
+            <p><strong>Você Irá No Carro do(a):</strong> <span id="infoCarro">-</span></p>
+        </div>
+
+        <div id="painelResultado"></div>
+
+        <div id="painelErro"></div>
+
+    </div>
+
+    <img class="logo" src="./imagens/logo.png" alt="Logo do Congresso" id="logoCongresso">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="script.js" defer></script>
+
+</body>
+</html>
